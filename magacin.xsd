@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.w3schools.com" elementFormDefault="qualified" targetNamespace="http://www.w3schools.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Magacin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="artikal" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+
+
+
+              <xs:element name="naziv" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:restrikcijaNaziv">
+                      <xs:attribute type="xs:integer" name="sifra" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+
+
+              <xs:element name="datum_izrade">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="dan">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">                          
+                          <xs:pattern value="[1-9]|[1-2][0-9]|3[0-1]"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="mesec">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:pattern value="[1-9]|1[0-2]"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="godina" type="xs:integer"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+
+              <xs:element name="cena">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="valuta">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="dinar"/>
+                            <xs:enumeration value="euro"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+
+              <xs:element name="kompanija_prodavca">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ime_kompanije"/>
+                    <xs:element type="xs:string" name="adresa" minOccurs="1" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+
+
+              <xs:element name="email_prodavca" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="restrikcijaEmail">
+                      <xs:attribute name="tip" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="privatni"/>
+                            <xs:enumeration value="sluzbeni"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:simpleType name="restrikcijaNaziv">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="restrikcijaEmail">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]+[0-9]+\c{0,18}@\c{4,8}.com"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>

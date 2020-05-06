@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!DOCTYPE Magacin SYSTEM "magacin.dtd">
 
-<Magacin>
+<Magacin xmlns="http://www.w3schools.com"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3schools.com magacin.xsd">
 
     <artikal>
 
@@ -18,8 +20,8 @@
             <adresa>Adresa1</adresa>
         </kompanija_prodavca>
 
-        <email_prodavca tip="privatni">email123@gmail.com</email_prodavca>
-        <email_prodavca tip="sluzbeni">emailadresa@gmail.com</email_prodavca>
+        <email_prodavca tip="privatni">E1mail@gmail.com</email_prodavca>
+        <email_prodavca tip="sluzbeni">E2mailadresa@gmail.com</email_prodavca>
 
     </artikal>
 
@@ -39,7 +41,7 @@
             <adresa>Adresa3</adresa>
         </kompanija_prodavca>
 
-        <email_prodavca tip="sluzbeni">nekiEmail@gmail.com</email_prodavca>
+        <email_prodavca tip="sluzbeni">N3ekiEmail@gmail.com</email_prodavca>
         
     </artikal>
 
