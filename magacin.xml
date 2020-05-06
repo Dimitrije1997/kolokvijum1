@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+
+<Magacin>
+
+    <artikal>
+
+        <naziv sifra="25">Naziv1</naziv>
+        <datum_izrade>
+            <dan>8</dan>
+            <mesec>12</mesec>
+            <godina>2019</godina>
+        </datum_izrade>
+
+        <cena valuta="dinar">1000</cena>
+        <kompanija_prodavca>
+            <ime_kompanije>Kompanija1</ime_kompanije>
+            <adresa>Adresa1</adresa>
+        </kompanija_prodavca>
+
+        <email_prodavca tip="privatni">email123@gmail.com</email_prodavca>
+        <email_prodavca tip="sluzbeni">emailadresa@gmail.com</email_prodavca>
+
+    </artikal>
+
+    <artikal>
+
+        <naziv sifra="12">Naziv2</naziv>
+        <datum_izrade>
+            <dan>9</dan>
+            <mesec>11</mesec>
+            <godina>2018</godina>
+        </datum_izrade>
+
+        <cena valuta="euro">20</cena>
+        <kompanija_prodavca>
+            <ime_kompanije>Kompanija2</ime_kompanije>
+            <adresa>Adresa2</adresa>
+            <adresa>Adresa3</adresa>
+        </kompanija_prodavca>
+
+        <email_prodavca tip="sluzbeni">nekiEmail@gmail.com</email_prodavca>
+        
+    </artikal>
+
+</Magacin>
