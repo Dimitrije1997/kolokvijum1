@@ -1,0 +1,23 @@
+<!ELEMENT Magacin (artikal)+>
+
+<!ELEMENT artikal (naziv,datum_izrade,cena,kompanija_prodavca,(email_prodavca)+)>
+
+<!ELEMENT naziv (#PCDATA)>
+<!ATTLIST naziv sifra ID #REQUIRED>
+
+
+<!ELEMENT datum_izrade (dan,mesec,godina)>
+<!ELEMENT dan (#PCDATA)>
+<!ELEMENT mesec (#PCDATA)>
+<!ELEMENT godina (#PCDATA)>
+
+
+<!ELEMENT cena (#PCDATA)>
+<!ATTLIST cena valuta (dinar|euro) "dinar">
+
+<!ELEMENT kompanija_prodavca (ime_kompanije,(adresa)+)>
+<!ELEMENT ime_kompanije (#PCDATA)>
+<!ELEMENT adresa (#PCDATA)>
+
+<!ELEMENT email_prodavca (#PCDATA)>
+<!ATTLIST email_prodavca tip (privatni|sluzbeni) #REQUIRED>
