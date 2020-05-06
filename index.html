@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolokvijum 1</title>
+</head>
+
+
+<body>
+
+    <form action="/dodajArtikal" method="POST">
+        Id:<input type="number" name="id"><br>
+        Naziv:<input type="text" name='naziv'><br>
+        Cena:<input type="number" name='cena'><br>
+        Ime kompanije:<input type="text" name='imeKompanije'><br>
+        <button type="submit">Dodaj artikal</button>
+    </form><br>
+
+
+
+    <form action="/sviArtikli" method="GET">
+        Ime kompanije: <input type="text" name="imeKompanije">
+        <button type="submit">Svi artikli</button>
+    </form>
+
+
+    <br>
+    <form action="/obrisiArtikal" method="POST">
+        id<input type="number" name="id" id="id"><br>
+        <button type="submit">Obrisi artikal</button>
+    </form>
+
+
+    <br>
+    <form action="/izmeniArtikal" method="POST">
+        Id:<input type="number" name="id"><br>
+        Naziv:<input type="text" name='naziv'><br>
+        Cena:<input type="number" name='cena'><br>
+        Ime kompanije:<input type="text" name='imeKompanije'><br>
+        <button type="submit">Izmeni artikal</button>
+    </form>
+
+</body>
+
+</html>
